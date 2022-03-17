@@ -1,0 +1,4 @@
+* @dukker
+*.js @dukker
+*.yml @dukker
+/public/ @dukker
