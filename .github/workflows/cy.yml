@@ -30,7 +30,7 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
           name: code-coverage
-          path: converage
+          path: coverage
       - name: Build Project
         if: github.event_name == 'push'
         run: npm run build
