@@ -1,0 +1,10 @@
+name: Notify on Issue
+on:
+  issues:
+    types: [opened]
+jobs:
+  slact-message:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Slack Message
+        run: echo "hello"
