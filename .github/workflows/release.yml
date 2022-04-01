@@ -1,0 +1,10 @@
+name: Notify on Release
+on:
+  release:
+    types: [published]
+jobs:
+  slact-message:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Slack Message
+        run: echo "hello"
