@@ -4,10 +4,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: ./.github/actions/hello
-        id: hello
+      - uses: ./.github/actions/issue
+        id: issue
         with:
-          who-to-greet: "World"
+          token: ${{ secrets.GITHUB_TOKEN }}
+          title: Title
+          body: Body
+          assignees: |
+            dukker
       - run: |
-          echo "Time: ${{ steps.hello.outputs.time }}"
-          echo $HELLO_VAR
+          echo ${{ steps.issue.output.issue }}
